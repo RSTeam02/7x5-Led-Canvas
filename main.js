@@ -1,5 +1,5 @@
-import {Controller} from "./mvc/controller.js";
+import { Controller } from "./mvc/controller.js";
 
 window.onload = function () {
-   new Controller();
+    new Controller();
 }

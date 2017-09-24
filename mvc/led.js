@@ -5,32 +5,27 @@
 
 export class Led {
 
-    constructor() {
-        //init led with certain opacity, color
+	constructor() {
+		//init led with certain opacity, color
 
-        this.private = {
-            on: () => {				
-				return on= {
-		            opacity: 0,
-		            color: ""
-				};
-            },
-
-            off: () => {			
-				return off= {
-                	opacity: 0,
-                	color: ""
-				};
-            }
-        };
-    }
+		this.private = {
+			on: {
+				opacity: 0,
+				color: ""
+			},
+			off: {
+				opacity: 0,
+				color: ""
+			}
+		};
+	}
 
 
 	setOn(opacity, color) {
-		this.private.on ={
+		this.private.on = {
 			color: color,
 			opacity: opacity
-		};			
+		};
 	}
 
 	getOn() {
@@ -38,13 +33,13 @@ export class Led {
 	}
 
 	setOff(opacity, color) {
-		this.private.off ={
+		this.private.off = {
 			color: color,
 			opacity: opacity
-		};	
+		};
 	}
 
-	getOff() {		
+	getOff() {
 		return this.private.off;
 	}
 
