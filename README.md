@@ -1,4 +1,4 @@
-#7x5 LED-Canvas
+# 7x5 LED-Canvas
 
 Display a string of characters by a 7x5 pixel canvas from clock or text input. 
 The characters are stored in a json file, each character represents an attribute of it and its value is stored as a binary array string of ones and zeroes. 1 => pixel on, 0 => pixel off. 
