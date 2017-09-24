@@ -8,7 +8,7 @@ import {View} from "./view.js";
 
 export class Controller {
 
-    constructor(alphanumeric) {
+    constructor() {
     	this.readJSON();
         this.inputUI();
         this.newMatrix();        
