@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        #updateSlider{
+            display: inline
+            
+        }
+        h2 {
+            color: white;
+        }
+        
+        body {
+            overflow-x: hidden;
+            background-color: black;
+        }
+        
+        form {
+            opacity: .7;
+            font-size: 15px;
+            color: white;
+        }
+        
+        fieldset {
+            border: none;
+        }
+    </style>
+</head>
+<h2>7x5 LED - Character Canvas</h2>
+
+<body>
+    <form name="selector">
+        <fieldset>
+            LED-Color:
+            <input class="radioCol" type="radio" id="red" name="color" value="#RadialGradient1" checked>red</input>
+            <input class="radioCol" type="radio" id="green" name="color" value="#RadialGradient2">green</input>
+            <input class="radioCol" type="radio" id="blue" name="color" value="#RadialGradient3">blue</input>
+            <input class="radioCol" type="radio" id="yellow" name="color" value="#RadialGradient5">yellow</input>
+            <input class="radioCol" type="radio" id="white" name="color" value="#RadialGradient4">white</input>
+            <input class="radioCol" type="radio" id="random" name="color" value="#Random">random</input>
+        </fieldset>
+
+        <fieldset>
+            LED-Shape:
+            <input class="radioBtn" type="radio" id="circle" name="shape" value="circle" checked>circle</input>
+            <input class="radioBtn" type="radio" id="square" name="shape" value="rect">square</input>
+        </fieldset>
+
+        <fieldset>
+            <div id = "updateSlider"></div>
+
+            <input type="range" min="250" max="1000" step="250" id="slider" value="250" class="mkInput">
+        </fieldset>
+
+        <fieldset>
+            <input class="mkInput" type="radio" id="txt" name="mode" value="#text" checked>Enter Text:
+            <input type="text" id="txtInput" value="^ Hello World ^" class="mkInput"></input> 
+            
+        </fieldset>
+        <fieldset>
+            <input class="mkInput" type="radio" id="time" name="mode" value="#time">Show Time</input>
+        </fieldset>
+    </form><br>
+
+    <svg id="svgContent" version="1.1" viewBox="0 0 500 150" preverseAspectRatio="xMinYMinmeet">
+            <defs>
+                <radialGradient id="RadialGradient1">
+                    <stop offset="0%" stop-color="orange"/>
+                    <stop offset="100%" stop-color="red"/>
+                </radialGradient> 
+                <radialGradient id="RadialGradient2">
+                    <stop offset="0%" stop-color="yellow"/>
+                    <stop offset="100%" stop-color="green"/>
+                </radialGradient>
+                          
+                <radialGradient id="RadialGradient3">
+                    <stop offset="0%" stop-color="white"/>
+                    <stop offset="100%" stop-color="blue"/>
+                </radialGradient>
+                <radialGradient id="RadialGradient5">
+                    <stop offset="0%" stop-color="yellow"/>
+                    <stop offset="100%" stop-color="orange"/>
+                </radialGradient>    
+                <radialGradient id="RadialGradient4">
+                    <stop offset="0%" stop-color="white"/>
+                    <stop offset="100%" stop-color="grey"/>
+                </radialGradient>
+                 
+                                
+            </defs>
+            <g  id ="ledDisplay">
+                
+            </g>          
+        </svg>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="main.js" type="module"></script>
+
+</body>
+
+</html>
