@@ -47,8 +47,8 @@ export class Controller {
                 ledDisplay.removeChild(ledDisplay.firstChild);
             }
 
-            digit = (date.getHours() % 12 >= 10) ? 5 : 4;
-
+            digit = (date.getHours() % 12 >= 10 || date.getHours() % 12 === 0) ? 5 : 4;
+            console.log()
             str = (mode === "#text")
                 ? stringConv.split("").join("\u0020")
                 : (new Date().toLocaleTimeString().slice(0, digit) + "\u0020").split("").join("\u0020");
